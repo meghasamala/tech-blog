@@ -8,8 +8,8 @@ router.get('/', (req, res) => {
         order: [['created_at', 'DESC']],
         attributes: [
           'id',
-          'post_url',
           'title',
+          'post_text',
           'created_at'
         ],
         include: [
