@@ -1,6 +1,14 @@
 * {
     box-sizing: border-box;
   }
+
+:root {
+  --slate-blue: #725AC1;
+  --mid-blue-purple: #8D86C9;
+  --bluey: #111344;
+  --light-bluey: #DAE0F2;
+  --gray: #CAC4CE;
+}
   
   body, html {
     height: 100%;
@@ -11,18 +19,20 @@
   }
   
   a {
+    
     text-decoration: none;
-    color: #225ca3;
+    color: var(--slate-blue);
     font-weight: bold;
     transition: color .1s;
   }
   
   a:hover {
-    color: #3486eb;
+    color: var(--mid-blue-purple);
   }
   
   button {
-    background-color: #225ca3;
+    font-family: 'Orbitron', sans-serif;
+    background-color: var(--slate-blue);
     border: 0;
     padding: 1%;
     color: white;
@@ -33,7 +43,7 @@
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: var(--mid-blue-purple);
   }
   
   .post-list {
@@ -49,12 +59,21 @@
   
   textarea:focus, input:focus {
     outline: none;
-    border: 1px solid #3486eb;
+    border: 1px solid var(--slate-blue);
   }
   
   textarea {
     min-width: 40%;
     min-height: 100px;
+    font-family: sans-serif;
+  }
+
+  h2 {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  ul {
+    list-style: none;
   }
   
   form > div {
@@ -75,15 +94,15 @@
   }
   
   header {
-    border-bottom: 1px solid #ccc;
+    font-family: 'Orbitron', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1%;
   }
   
-  header h1 {
-    font-size: 1em;
+  header h1 , header nav {
+    font-size: 2em;
   }
   
   main {
@@ -110,18 +129,18 @@
   }
   
   .delete-post-btn {
-    background-color: #d41414;
+    background-color: var(--slate-blue);
   }
   
   .delete-post-btn:hover {
-    background-color: #ff643d;
+    background-color: var(--mid-blue-purple);
   }
   
   .post {
     margin-bottom: 2%;
     line-height: 150%;
   }
-  
+
   .post .title span {
     font-style: italic;
     font-size: 90%;
@@ -131,15 +150,6 @@
   .edit-link {
     display: block;
     margin: -1.5% 0 2% 0;
-  }
-  
-  .upvote-btn {
-    background-color: #197d0f;
-    transition: background-color .1s;
-  }
-  
-  .upvote-btn:hover {
-    background-color: #1f9c13;
   }
   
   .comment-form {
@@ -152,7 +162,7 @@
   }
   
   .comment:nth-child(odd) {
-    background-color: #fff5eb;
+    background-color: var(--gray);
   }
   
   .comment .meta {
